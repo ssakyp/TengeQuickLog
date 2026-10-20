@@ -1,6 +1,6 @@
 # Tenge QuickLog
 
-A one-screen expense/income logger for Android, built for **Task 2 (Android Application with Jetpack Compose)**. It adapts the data model and purpose of the larger Tenge Tracker project (continuing the HW1/HW2 line) into a small, focused Compose app: log a transaction, see your running balance, and find things again with a search bar and a type filter.
+A one-screen expense/income logger for Android, built for **Task 2 (Android Application with Jetpack Compose)**. It adapts the data model and purpose of the larger Tenge Tracker project (Pet project) into a small, focused Compose app: log a transaction, see your running balance, and find things again with a search bar and a type filter.
 
 ## Features
 
@@ -11,7 +11,7 @@ A one-screen expense/income logger for Android, built for **Task 2 (Android Appl
 
 ## Architecture
 
-- `data/Models.kt` — plain Kotlin (`Transaction`, `Category`, `TxType`, `Summary`); no Android dependency, so it's easy to unit-test or reuse.
+- `data/Models.kt` — plain Kotlin (`Transaction`, `Category`, `TxType`, `Summary`).
 - `QuickLogViewModel.kt` — owns all state as `StateFlow`. The visible list and the summary totals are derived with `combine`/`map`/`stateIn` instead of being stored and kept in sync by hand.
 - `ui/components/Components.kt` — 3 reusable, stateless composables: `SummaryCard`, `SelectableChip`, `TransactionCard`.
 - `ui/QuickLogScreen.kt` — the single screen, plus the add-form.

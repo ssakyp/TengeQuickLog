@@ -43,14 +43,8 @@ import com.tenge.quicklog.ui.components.SelectableChip
 import com.tenge.quicklog.ui.components.SummaryCard
 import com.tenge.quicklog.ui.components.TransactionCard
 
-private val weight: Any
-    get() {
-        TODO()
-    }
-
 /**
- * The whole app is one screen, as Task 2 allows (no Navigation Compose
- * requirement here — that's saved for the midterm project). Everything the
+ * Everything the
  * person can change lives in [QuickLogViewModel] as [kotlinx.coroutines.flow.StateFlow],
  * so it keeps its values across rotation; only short-lived, purely-visual
  * state (the add-form's draft fields, whether it's expanded) is kept local
@@ -205,8 +199,6 @@ private fun AddTransactionForm(onAdd: (title: String, amount: Double, type: TxTy
 
 @Composable
 private fun CategoryChipRow(selected: Category, onSelected: (Category) -> Unit) {
-    // A simple wrapping-free row is enough for 7 short labels; FlowRow would
-    // be overkill for a one-screen app like this one.
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(6.dp)

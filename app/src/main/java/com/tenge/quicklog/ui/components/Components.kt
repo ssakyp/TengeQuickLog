@@ -25,10 +25,6 @@ import com.tenge.quicklog.data.Transaction
 import com.tenge.quicklog.data.TxType
 import java.util.Locale
 
-private val weight: Any
-    get() {
-        TODO()
-    }
 
 /** Formats a raw tenge amount consistently everywhere it's shown — one place to change the format. */
 fun formatTenge(amount: Double): String = "${String.format(Locale.US, "%,.0f", amount)} ₸"
